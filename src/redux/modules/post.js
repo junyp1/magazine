@@ -12,6 +12,8 @@ const EDIT_POST = "EDIT_POST";
 const DELETE_POST = "DELETE_POST";
 const LOADING = "LOADING";
 
+
+
 const setPost = createAction(SET_POST, (post_list, paging) => ({
   post_list,
   paging,
@@ -38,6 +40,8 @@ const initialPost = {
   layout_type: "a",
   insert_dt: moment().format("YYYY-MM-DD hh:mm:ss"),
 };
+
+
 
 const editPostFB = (post_id = null, post = {}) => {
   return function (dispatch, getState, { history }) {
@@ -352,6 +356,8 @@ export default handleActions(
 
         draft.is_loading = action.payload.is_loading;
       }),
+
+      
   },
   initialState
 );

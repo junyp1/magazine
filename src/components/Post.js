@@ -4,12 +4,14 @@ import { HeartButton } from "./index";
 
 import { history } from "../redux/configureStore";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { actionCreators as postActions } from "../redux/modules/post";
 
 
 const Post = React.memo((props) => {
   const dispatch = useDispatch();
+
+
 
   return (
     <React.Fragment>
